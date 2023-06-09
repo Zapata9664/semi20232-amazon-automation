@@ -1,5 +1,4 @@
-package starter.navigation;
-
+package com.amazon.navigation;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;

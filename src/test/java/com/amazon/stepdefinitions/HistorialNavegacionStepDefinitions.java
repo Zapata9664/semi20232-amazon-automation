@@ -14,7 +14,7 @@ import static com.amazon.page.HistorialNavegacionPage.LIST_ITEMS_HISTORIAL;
 import static com.amazon.page.ModalAccountAndList.BUTTON_HISTORIAL;
 
 public class HistorialNavegacionStepDefinitions {
-    @Cuando("visualizo un {string}")
+    @Cuando("visualizo un {string} en la pagina web")
     public void visualizoUnItem(String item) {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),

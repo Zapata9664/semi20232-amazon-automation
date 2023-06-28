@@ -18,7 +18,7 @@ public class LibrosEspañolStepDefinitions {
         );
     }
 
-    @Entonces("debe verse \"libros en español\" en la pagina de libros")
+    @Entonces("debe verse el titulo \"libros en español\" en la pagina de libros")
     public void verNumeroItemsEnElHistorialDeNavegacion() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Ensure.that(LIBROS_ESPAÑOL_TITLE).isEnabled()

@@ -13,7 +13,7 @@ import static com.amazon.page.InicioPage.ITEM_BUSQUEDA_INICIO;
 import static com.amazon.page.ResultadosBusqueda.ITEM_COMPRA_HEALTH;
 
 public class CambiarPaisDeEnvioStepDefinitions {
-        @Cuando("cambio mi lugar de envio a Canada")
+        @Cuando("cuando selecciono Canada como mi nuevo lugar de envio")
         public void visualizoUnItem() {
             OnStage.theActorCalled("comprador").attemptsTo(
                     Open.url("https://www.amazon.com"),
@@ -21,7 +21,7 @@ public class CambiarPaisDeEnvioStepDefinitions {
             );
         }
 
-        @Entonces("en mis articulos debe aparecer Envio a canada")
+        @Entonces("en los detalles de mis articulos debe aparecer \"Envio a canada\"")
         public void verNumeroItemsEnElHistorialDeNavegacion() {
             OnStage.theActorInTheSpotlight().attemptsTo(
                     Click.on(ITEM_BUSQUEDA_INICIO),

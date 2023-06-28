@@ -17,7 +17,7 @@ import static com.amazon.page.ModalAccountAndList.MUSIC_LIBRARY;
 import static com.amazon.page.ResultadosBusqueda.TITLE_RESULTADOS_MUSICA;
 
 public class EscucharCancionStepDefinitions {
-    @Cuando("ingreso {string} en la seccion de musica")
+    @Cuando("ingreso {string} en la barra de busqueda")
     public void entroAmazonMusic(String item) {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),
@@ -25,7 +25,7 @@ public class EscucharCancionStepDefinitions {
 
         );
     };
-    @Entonces("deben verse los resultados de la busqueda")
+    @Entonces("debo ver los resultados de búsqueda relacionados con la canción \"El Remate\"")
     public void verResultadosCanciones() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Ensure.that(TITLE_RESULTADOS_MUSICA).isEnabled()

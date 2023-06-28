@@ -1,9 +1,9 @@
 # language: es
-Característica: cambiar lenguaje
-  Yo como usuario
-  Quiero cambiar el lenguaje de la pagina
-  Para posteriormente ver el contenido de la pagina en mi lenguaje
+Característica: cambiar idioma a español
+  Yo como usuario de habla hispana
+  Quiero cambiar el idioma de la pagina a español
+  Para posteriormente ver el contenido de la pagina en mi idioma
 
-  Escenario: cambiar el lenguaje de la pagina
-    Cuando cambio el lenguaje a español
-    Entonces debe verse "Buscar Amazon" en la barra de busqueda
+  Escenario: cambiar el idioma a español
+    Cuando selecciono español como idioma
+    Entonces en la barra de búsqueda se debería mostrar "Buscar en Amazon"

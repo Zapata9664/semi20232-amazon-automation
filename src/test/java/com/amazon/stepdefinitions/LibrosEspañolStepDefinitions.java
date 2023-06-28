@@ -1,27 +1,27 @@
 package com.amazon.stepdefinitions;
 
-import com.amazon.tasks.CambiarLenguaje;
+import com.amazon.tasks.EntrarLibrosEspañol;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import static com.amazon.page.CabeceraPage.*;
 
-public class CambiarLenguajeStepDefinitions {
-    @Cuando("cambio el lenguaje a español")
+import static com.amazon.page.LibrosPremiadosPage.LIBROS_ESPAÑOL_TITLE;
+
+public class LibrosEspañolStepDefinitions {
+    @Cuando("voy a la seccion de libros en español")
     public void visualizoUnItem() {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),
-                CambiarLenguaje.cambiarLenguaje()
+                EntrarLibrosEspañol.librosEspañol()
         );
-    };
-    @Entonces("debe verse \"Buscar Amazon\" en la barra de busqueda")
+    }
+
+    @Entonces("debe verse \"libros en español\" en la pagina de libros")
     public void verNumeroItemsEnElHistorialDeNavegacion() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                Ensure.that(INPUT_BARRA_BUSQUEDA_ESPAÑOL).isEnabled()
+                Ensure.that(LIBROS_ESPAÑOL_TITLE).isEnabled()
         );
-    };
-};
+    }
+}

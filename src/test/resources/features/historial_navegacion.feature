@@ -2,8 +2,8 @@
 Característica: ver historial de navegacion
   Yo como comprador
   Quiero visualizar los elementos del historial
-  Para posteriormente comprar
+  Para posteriormente ver los elementos que he abierto
 
-  Escenario: visualizo un elemento
-    Cuando visualizo un "control de pc" en el historial de navegacion
+  Escenario: visualizo historial de navegacion
+    Cuando visualizo un "control de pc"
     Entonces debe verse 1 item en el historial de navegación

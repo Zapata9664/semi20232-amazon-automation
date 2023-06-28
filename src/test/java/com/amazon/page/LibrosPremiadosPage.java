@@ -3,5 +3,5 @@ package com.amazon.page;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class LibrosPremiadosPage {
-    public static Target AWARD_WINNERS = Target.the("seccion libros premiados").locatedBy(" //b[text()=\"Book Awards\"]");
+    public static Target LIBROS_ESPAÑOL_TITLE = Target.the("seccion libros premiados").locatedBy("//b[text()=\"Libros en Español\"]");
 }

@@ -5,5 +5,5 @@ import org.openqa.selenium.By;
 
 public class DetalleItem {
     public static Target BUT_AGREGAR_CARRITO = Target.the("botón agregar carrito en detalle del item").located(By.id("add-to-cart-button"));
-    public static Target TEXT_ENVIO_CANADA = Target.the("botón agregar carrito en detalle del item").locatedBy("//span[text()=\"Canada\"]");
+    public static Target TEXT_ENVIO_CANADA = Target.the("texto envio a canada en el detalle del item").locatedBy("//span[text()=\"Canada\"]");
 }

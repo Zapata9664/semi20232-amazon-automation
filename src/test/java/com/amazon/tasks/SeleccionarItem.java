@@ -14,7 +14,10 @@ public class SeleccionarItem {
                 Click.on(ITEM_COMPRA),
                 Click.on(BUT_AGREGAR_CARRITO)
         );
-
+    };
+    public static Performable onlyItemSeleccionado() {
+        return Task.where("{0} buscando items con envío a Colombia",
+                Click.on(ITEM_COMPRA)
+                );
     }
-
-}
+};

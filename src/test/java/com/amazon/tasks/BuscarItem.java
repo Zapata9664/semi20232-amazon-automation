@@ -18,7 +18,8 @@ public class BuscarItem {
 
     public static Performable onlyBuscarItem(String item) {
         return Task.where("{0} buscando el item ´" + item + "´",
-                Enter.theValue(item).into(INPUT_BARRA_BUSQUEDA).thenHit(Keys.ENTER)
+                Enter.theValue(item).into(INPUT_BARRA_BUSQUEDA).thenHit(Keys.ENTER),
+                SeleccionarItem.onlyItemSeleccionado()
         );
     }
 }

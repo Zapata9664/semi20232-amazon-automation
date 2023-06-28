@@ -6,5 +6,5 @@ Característica: escuchar una cancion
 
   Escenario: escuchar una cancion
     Cuando ingreso "el remate" en la seccion de musica
-    Entonces debe aparecer el texto Resultados de búsqueda para "el remate"
+    Entonces deben verse los resultados de la busqueda
 

@@ -11,13 +11,14 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 
 import static com.amazon.page.CabeceraPage.*;
 import static com.amazon.page.HistorialNavegacionPage.LIST_ITEMS_HISTORIAL;
+import static com.amazon.page.ModalAccountAndList.BUTTON_HISTORIAL;
 
 public class HistorialNavegacionStepDefinitions {
-    @Cuando("visualizo un {string} en el historial de navegacion")
+    @Cuando("visualizo un {string}")
     public void visualizoUnItem(String item) {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),
-                BuscarItem.itemSeleccionado(item)
+                BuscarItem.onlyBuscarItem(item)
         );
     }
 

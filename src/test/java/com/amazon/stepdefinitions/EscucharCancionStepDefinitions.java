@@ -1,5 +1,6 @@
 package com.amazon.stepdefinitions;
 
+import com.amazon.tasks.BuscarCancion;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actions.Click;
@@ -12,24 +13,22 @@ import org.openqa.selenium.Keys;
 
 import static com.amazon.page.CabeceraMusicPage.INPUT_BARRA_BUQEDA_MUSICA;
 import static com.amazon.page.CabeceraPage.*;
-import static com.amazon.page.TituloPodcast.*;
+import static com.amazon.page.ModalAccountAndList.MUSIC_LIBRARY;
+import static com.amazon.page.ResultadosBusqueda.TITLE_RESULTADOS_MUSICA;
 
-public class EscucharPodcastStepDefinitions {
+public class EscucharCancionStepDefinitions {
     @Cuando("ingreso {string} en la seccion de musica")
-    public void entroALaSesionPodcast(String item) {
+    public void entroAmazonMusic(String item) {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),
-                MoveMouse.to(ACCOUNT_AND_LIST),
-                Click.on(MUSIC_LIBRARY),
-                Enter.theValue(item).into(INPUT_BARRA_BUQEDA_MUSICA).thenHit(Keys.ENTER)
+                BuscarCancion.cancionSeleccionada(item)
 
         );
-    }
-
-    @Entonces("debe aparecer el texto Resultados de búsqueda para {string}")
-    public void verSesionPodcast(String item) {
+    };
+    @Entonces("deben verse los resultados de la busqueda")
+    public void verResultadosCanciones() {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Ensure.that(TITLE_RESULTADOS_MUSICA).isEnabled()
         );
-    }
-}
+    };
+};
